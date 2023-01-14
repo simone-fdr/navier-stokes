@@ -13,7 +13,7 @@ Stokes::setup()
     grid_in.attach_triangulation(mesh_serial);
 
     const std::string mesh_file_name =
-      "../mesh/mesh-step-" + std::to_string(N + 1) + ".msh";
+      "../mesh/fourthmesh.msh";
 
     std::ifstream grid_in_file(mesh_file_name);
     grid_in.read_msh(grid_in_file);
@@ -250,7 +250,7 @@ Stokes::assemble()
             for (unsigned int f = 0; f < cell->n_faces(); ++f)
               {
                 if (cell->face(f)->at_boundary() &&
-                    cell->face(f)->boundary_id() == 2)
+                    cell->face(f)->boundary_id() == 19)
                   {
                     fe_face_values.reinit(cell, f);
 
@@ -289,7 +289,7 @@ Stokes::assemble()
       // We interpolate first the inlet velocity condition alone, then the wall
       // condition alone, so that the latter "win" over the former where the two
       // boundaries touch.
-      boundary_functions[0] = &inlet_velocity;
+      boundary_functions[18] = &inlet_velocity;
       VectorTools::interpolate_boundary_values(dof_handler,
                                               boundary_functions,
                                               boundary_values,
@@ -298,7 +298,7 @@ Stokes::assemble()
 
       boundary_functions.clear();
       Functions::ZeroFunction<dim> zero_function(dim + 1);
-      boundary_functions[1] = &zero_function;
+      boundary_functions[20] = &zero_function;
       VectorTools::interpolate_boundary_values(dof_handler,
                                               boundary_functions,
                                               boundary_values,
