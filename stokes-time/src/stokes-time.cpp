@@ -426,14 +426,14 @@ StokesTime::solve_time_step()
 
   SolverGMRES<TrilinosWrappers::MPI::BlockVector> solver(solver_control);
 
-  // PreconditionBlockDiagonal preconditioner;
-  // preconditioner.initialize(system_matrix.block(0, 0),
-  //                           pressure_mass.block(1, 1));
+  //PreconditionBlockDiagonal preconditioner;
+  //preconditioner.initialize(system_matrix.block(0, 0),
+  //                          pressure_mass.block(1, 1));
 
   PreconditionBlockTriangular preconditioner;
-  preconditioner.initialize(system_matrix.block(0, 0),
+  preconditioner.initialize(lhs_matrix.block(0, 0),
                             pressure_mass.block(1, 1),
-                            system_matrix.block(1, 0));
+                            lhs_matrix.block(1, 0));
 
   pcout << "Solving the linear system" << std::endl;
   solver.solve(lhs_matrix, solution_owned, system_rhs, preconditioner);
