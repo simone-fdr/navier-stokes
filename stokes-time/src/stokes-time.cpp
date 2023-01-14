@@ -1,7 +1,7 @@
 #include "stokes-time.hpp"
 
 void
-Stokes::setup()
+StokesTime::setup()
 {
   // Create the mesh.
   {
@@ -147,8 +147,11 @@ Stokes::setup()
     sparsity_pressure_mass.compress();
 
     pcout << "  Initializing the matrices" << std::endl;
+    mass_matrix.reinit(sparsity);
     system_matrix.reinit(sparsity);
     pressure_mass.reinit(sparsity_pressure_mass);
+    lhs_matrix.reinit(sparsity);
+    rhs_matrix.reinit(sparsity);
 
     pcout << "  Initializing the system right-hand side" << std::endl;
     system_rhs.reinit(block_owned_dofs, MPI_COMM_WORLD);
@@ -159,32 +162,28 @@ Stokes::setup()
 }
 
 void
-Stokes::assemble()
+StokesTime::assemble_matrices()
 {
     pcout << "===============================================" << std::endl;
-    pcout << "Assembling the system" << std::endl;
+    pcout << "Assembling the matrices" << std::endl;
 
     const unsigned int dofs_per_cell = fe->dofs_per_cell;
     const unsigned int n_q           = quadrature->size();
-    const unsigned int n_q_face      = quadrature_face->size();
 
     FEValues<dim>     fe_values(*fe,
                             *quadrature,
                             update_values | update_gradients |
                               update_quadrature_points | update_JxW_values);
-    FEFaceValues<dim> fe_face_values(*fe,
-                                    *quadrature_face,
-                                    update_values | update_normal_vectors |
-                                      update_JxW_values);
 
+
+    FullMatrix<double> cell_mass_matrix(dofs_per_cell, dofs_per_cell);
     FullMatrix<double> cell_matrix(dofs_per_cell, dofs_per_cell);
     FullMatrix<double> cell_pressure_mass_matrix(dofs_per_cell, dofs_per_cell);
-    Vector<double>     cell_rhs(dofs_per_cell);
 
     std::vector<types::global_dof_index> dof_indices(dofs_per_cell);
 
     system_matrix = 0.0;
-    system_rhs    = 0.0;
+    mass_matrix   = 0.0;
     pressure_mass = 0.0;
 
     FEValuesExtractors::Vector velocity(0);
@@ -198,22 +197,20 @@ Stokes::assemble()
         fe_values.reinit(cell);
 
         cell_matrix               = 0.0;
-        cell_rhs                  = 0.0;
+        cell_mass_matrix          = 0.0;
         cell_pressure_mass_matrix = 0.0;
 
         for (unsigned int q = 0; q < n_q; ++q)
           {
-            Vector<double> forcing_term_loc(dim);
-            forcing_term.vector_value(fe_values.quadrature_point(q),
-                                      forcing_term_loc);
-            Tensor<1, dim> forcing_term_tensor;
-            for (unsigned int d = 0; d < dim; ++d)
-              forcing_term_tensor[d] = forcing_term_loc[d];
-
             for (unsigned int i = 0; i < dofs_per_cell; ++i)
               {
                 for (unsigned int j = 0; j < dofs_per_cell; ++j)
                   {
+                    // Mass matrix
+                    cell_mass_matrix(i, j) += fe_values[velocity].value(i, q) *
+                                            fe_values[velocity].value(j, q) /
+                                            deltat * fe_values.JxW(q);
+
                     // Viscosity term.
                     cell_matrix(i, j) +=
                       nu *
@@ -236,9 +233,121 @@ Stokes::assemble()
                       fe_values[pressure].value(i, q) *
                       fe_values[pressure].value(j, q) / nu * fe_values.JxW(q);
                   }
+              }
+          }
 
+        cell->get_dof_indices(dof_indices);
+
+        mass_matrix.add(dof_indices, cell_mass_matrix);
+        system_matrix.add(dof_indices, cell_matrix);
+
+        pressure_mass.add(dof_indices, cell_pressure_mass_matrix);
+
+      }
+
+    system_matrix.compress(VectorOperation::add);
+    pressure_mass.compress(VectorOperation::add);
+    mass_matrix.compress(VectorOperation::add);
+
+    lhs_matrix.copy_from(mass_matrix);
+    lhs_matrix.add(theta, system_matrix);
+
+    rhs_matrix.copy_from(mass_matrix);
+    rhs_matrix.add(-(1.0 - theta), system_matrix);
+
+    // Dirichlet boundary conditions.
+    {
+      std::map<types::global_dof_index, double>           boundary_values;
+      std::map<types::boundary_id, const Function<dim> *> boundary_functions;
+
+      // We interpolate first the inlet velocity condition alone, then the wall
+      // condition alone, so that the latter "win" over the former where the two
+      // boundaries touch.
+      boundary_functions[18] = &inlet_velocity;
+      VectorTools::interpolate_boundary_values(dof_handler,
+                                              boundary_functions,
+                                              boundary_values,
+                                              ComponentMask(
+                                                {true, true, true, false}));
+
+      boundary_functions.clear();
+      Functions::ZeroFunction<dim> zero_function(dim + 1);
+      boundary_functions[20] = &zero_function;
+      VectorTools::interpolate_boundary_values(dof_handler,
+                                              boundary_functions,
+                                              boundary_values,
+                                              ComponentMask(
+                                                {true, true, true, false}));
+
+      MatrixTools::apply_boundary_values(
+        boundary_values, lhs_matrix, solution, system_rhs, false);
+    }
+}
+
+void
+StokesTime::assemble_rhs(const double &time){
+    pcout << "===============================================" << std::endl;
+    pcout << "Assembling the rhs" << std::endl;
+
+    const unsigned int dofs_per_cell = fe->dofs_per_cell;
+    const unsigned int n_q           = quadrature->size();
+    const unsigned int n_q_face      = quadrature_face->size();
+
+    FEValues<dim>     fe_values(*fe,
+                            *quadrature,
+                            update_values | update_gradients |
+                              update_quadrature_points | update_JxW_values);
+    FEFaceValues<dim> fe_face_values(*fe,
+                                    *quadrature_face,
+                                    update_values | update_normal_vectors |
+                                      update_JxW_values);
+                                      
+    Vector<double>     cell_rhs(dofs_per_cell);
+
+    std::vector<types::global_dof_index> dof_indices(dofs_per_cell);
+
+    system_rhs    = 0.0;
+
+    FEValuesExtractors::Vector velocity(0);
+    FEValuesExtractors::Scalar pressure(dim);
+
+    for (const auto &cell : dof_handler.active_cell_iterators())
+      {
+        if (!cell->is_locally_owned())
+          continue;
+
+        fe_values.reinit(cell);
+
+        cell_rhs                  = 0.0;
+
+        for (unsigned int q = 0; q < n_q; ++q)
+          {
+            Vector<double> forcing_term_new_loc(dim);
+            Vector<double> forcing_term_old_loc(dim);
+
+            forcing_term.set_time(time);
+            forcing_term.vector_value(fe_values.quadrature_point(q),
+                                      forcing_term_new_loc);
+
+
+            forcing_term.set_time(time - deltat);
+            forcing_term.vector_value(fe_values.quadrature_point(q),
+                                      forcing_term_old_loc);
+
+
+            Tensor<1, dim> forcing_term_tensor_new;
+            Tensor<1, dim> forcing_term_tensor_old;
+
+            for (unsigned int d = 0; d < dim; ++d){
+              forcing_term_tensor_new[d] = forcing_term_new_loc[d];
+              forcing_term_tensor_old[d] = forcing_term_old_loc[d];
+            }
+
+            for (unsigned int i = 0; i < dofs_per_cell; ++i)
+              {
                 // Forcing term.
-                cell_rhs(i) += scalar_product(forcing_term_tensor,
+                cell_rhs(i) += scalar_product(theta  * forcing_term_tensor_new +
+                                       (1.0 - theta) * forcing_term_tensor_old,
                                               fe_values[velocity].value(i, q)) *
                               fe_values.JxW(q);
               }
@@ -272,16 +381,14 @@ Stokes::assemble()
 
         cell->get_dof_indices(dof_indices);
 
-        system_matrix.add(dof_indices, cell_matrix);
         system_rhs.add(dof_indices, cell_rhs);
-        pressure_mass.add(dof_indices, cell_pressure_mass_matrix);
       }
 
-    system_matrix.compress(VectorOperation::add);
     system_rhs.compress(VectorOperation::add);
-    pressure_mass.compress(VectorOperation::add);
 
-    // Dirichlet boundary conditions.
+    rhs_matrix.vmult_add(system_rhs, solution_owned);
+
+    // Dirichlet boundary conditions. TODO poi toglie vedi se esplode
     {
       std::map<types::global_dof_index, double>           boundary_values;
       std::map<types::boundary_id, const Function<dim> *> boundary_functions;
@@ -306,12 +413,12 @@ Stokes::assemble()
                                                 {true, true, true, false}));
 
       MatrixTools::apply_boundary_values(
-        boundary_values, system_matrix, solution, system_rhs, false);
+        boundary_values, lhs_matrix, solution, system_rhs, false);
     }
 }
 
 void
-Stokes::solve()
+StokesTime::solve_time_step()
 {
   pcout << "===============================================" << std::endl;
 
@@ -329,7 +436,7 @@ Stokes::solve()
                             system_matrix.block(1, 0));
 
   pcout << "Solving the linear system" << std::endl;
-  solver.solve(system_matrix, solution_owned, system_rhs, preconditioner);
+  solver.solve(lhs_matrix, solution_owned, system_rhs, preconditioner);
   pcout << "  " << solver_control.last_step() << " GMRES iterations"
         << std::endl;
 
@@ -337,7 +444,7 @@ Stokes::solve()
 }
 
 void
-Stokes::output()
+StokesTime::output(const unsigned int &time_step, const double &time) const
 {
   pcout << "===============================================" << std::endl;
 
@@ -365,7 +472,10 @@ Stokes::output()
 
   data_out.build_patches();
 
-  const std::string output_file_name = "output-" + std::to_string(N);
+  std::string output_file_name = std::to_string(time_step);
+
+  output_file_name = "output-" + std::string(4 - output_file_name.size(), '0') +
+                     output_file_name;
 
   DataOutBase::DataOutFilter data_filter(
     DataOutBase::DataOutFilterFlags(/*filter_duplicate_vertices = */ false,
@@ -380,7 +490,42 @@ Stokes::output()
   data_out.write_xdmf_file(xdmf_entries,
                            output_file_name + ".xdmf",
                            MPI_COMM_WORLD);
+}
 
-  pcout << "Output written to " << output_file_name << std::endl;
+void
+StokesTime::solve()
+{
+  assemble_matrices();
+
   pcout << "===============================================" << std::endl;
+
+  // Apply the initial condition.
+  {
+    pcout << "Applying the initial condition" << std::endl;
+
+    VectorTools::interpolate(dof_handler, inlet_velocity, solution_owned);
+    solution = solution_owned;
+
+    // Output the initial solution.
+    output(0, 0.0);
+    pcout << "-----------------------------------------------" << std::endl;
+  }
+
+  unsigned int time_step = 0;
+  double       time      = 0;
+
+  while (time < T)
+    {
+      time += deltat;
+      ++time_step;
+
+      pcout << "n = " << std::setw(3) << time_step << ", t = " << std::setw(5)
+            << time << ":" << std::flush;
+
+      pcout << std::endl;
+
+      assemble_rhs(time);
+      solve_time_step();
+      output(time_step, time);
+    }
 }

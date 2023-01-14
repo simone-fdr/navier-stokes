@@ -1,5 +1,5 @@
-#ifndef STOKES_HPP
-#define STOKES_HPP
+#ifndef StokesTime_HPP
+#define StokesTime_HPP
 
 #include <deal.II/base/conditional_ostream.h>
 #include <deal.II/base/quadrature_lib.h>
@@ -34,8 +34,8 @@
 
 using namespace dealii;
 
-// Class implementing a solver for the Stokes problem.
-class Stokes
+// Class implementing a solver for the StokesTime problem.
+class StokesTime
 {
 public:
   // Physical dimension (1D, 2D, 3D)
@@ -246,15 +246,21 @@ public:
   };
 
   // Constructor.
-  Stokes(const unsigned int &N_,
+  StokesTime(
          const unsigned int &degree_velocity_,
-         const unsigned int &degree_pressure_)
+         const unsigned int &degree_pressure_,
+         const double & T_,
+         const double & deltat_,
+         const double & theta_
+         )
     : mpi_size(Utilities::MPI::n_mpi_processes(MPI_COMM_WORLD))
     , mpi_rank(Utilities::MPI::this_mpi_process(MPI_COMM_WORLD))
     , pcout(std::cout, mpi_rank == 0)
-    , N(N_)
     , degree_velocity(degree_velocity_)
     , degree_pressure(degree_pressure_)
+    , T(T_)
+    , deltat(deltat_)
+    , theta(theta_)
     , mesh(MPI_COMM_WORLD)
   {}
 
@@ -264,19 +270,27 @@ public:
 
   // Assemble system. We also assemble the pressure mass matrix (needed for the
   // preconditioner).
-  void
-  assemble();
+
 
   // Solve system.
   void
   solve();
 
-  // Output results.
-  void
-  output();
 
 protected:
   // MPI parallel. /////////////////////////////////////////////////////////////
+
+  void
+  assemble_matrices();
+
+  void
+  assemble_rhs(const double &time);
+
+  void
+  solve_time_step();
+
+  void
+  output(const unsigned int &time_step, const double &time) const;
 
   // Number of MPI processes.
   const unsigned int mpi_size;
@@ -289,7 +303,15 @@ protected:
 
   // Problem definition. ///////////////////////////////////////////////////////
 
-  // Kinematic viscosity [m2/s].
+  const double T;
+
+    // Time step.
+  const double deltat;
+
+  // Theta parameter of the theta method.
+  const double theta;
+
+  // Kinematic viscosity [m2/s].  
   const double nu = 1;
 
   // Outlet pressure [Pa].
@@ -302,9 +324,6 @@ protected:
   InletVelocity inlet_velocity;
 
   // Discretization. ///////////////////////////////////////////////////////////
-
-  // Mesh refinement.
-  const unsigned int N;
 
   // Polynomial degree used for velocity.
   const unsigned int degree_velocity;
@@ -339,12 +358,21 @@ protected:
   // DoFs relevant to current process in the velocity and pressure blocks.
   std::vector<IndexSet> block_relevant_dofs;
 
-  // System matrix.
+  // Mass matrix M / deltat.
+  TrilinosWrappers::BlockSparseMatrix mass_matrix;
+
+  // System matrix A.
   TrilinosWrappers::BlockSparseMatrix system_matrix;
 
   // Pressure mass matrix, needed for preconditioning. We use a block matrix for
   // convenience, but in practice we only look at the pressure-pressure block.
   TrilinosWrappers::BlockSparseMatrix pressure_mass;
+
+  // Matrix on the left-hand side (M / deltat + theta A).
+  TrilinosWrappers::BlockSparseMatrix lhs_matrix;
+
+  // Matrix on the right-hand side (M / deltat - (1 - theta) A).
+  TrilinosWrappers::BlockSparseMatrix rhs_matrix;
 
   // Right-hand side vector in the linear system.
   TrilinosWrappers::MPI::BlockVector system_rhs;

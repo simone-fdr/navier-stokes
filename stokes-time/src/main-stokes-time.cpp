@@ -6,16 +6,17 @@ main(int argc, char *argv[])
 {
   Utilities::MPI::MPI_InitFinalize mpi_init(argc, argv);
 
-  const unsigned int N               = 4;
   const unsigned int degree_velocity = 2;
   const unsigned int degree_pressure = 1;
 
-  Stokes problem(N, degree_velocity, degree_pressure);
+  const double T      = 1.0;
+  const double deltat = 0.05;
+  const double theta  = 0.5;
+
+  StokesTime problem(degree_velocity, degree_pressure, T, deltat, theta);
 
   problem.setup();
-  problem.assemble();
   problem.solve();
-  problem.output();
 
   return 0;
 }
