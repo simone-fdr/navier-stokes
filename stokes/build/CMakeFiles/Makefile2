@@ -54,16 +54,16 @@ RM = /u/sw/toolchains/gcc-glibc/11.2.0/base/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jellyfish/shared-folder/nmpde-labs/navier-stokes
+CMAKE_SOURCE_DIR = /home/jellyfish/shared-folder/nmpde-labs/navier-stokes/stokes
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/jellyfish/shared-folder/nmpde-labs/navier-stokes/build
+CMAKE_BINARY_DIR = /home/jellyfish/shared-folder/nmpde-labs/navier-stokes/stokes/build
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/navier-stokes.dir/all
+all: CMakeFiles/stokes.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -71,34 +71,34 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/navier-stokes.dir/clean
+clean: CMakeFiles/stokes.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/navier-stokes.dir
+# Target rules for target CMakeFiles/stokes.dir
 
 # All Build rule for target.
-CMakeFiles/navier-stokes.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/navier-stokes.dir/build.make CMakeFiles/navier-stokes.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/navier-stokes.dir/build.make CMakeFiles/navier-stokes.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jellyfish/shared-folder/nmpde-labs/navier-stokes/build/CMakeFiles --progress-num=1,2,3 "Built target navier-stokes"
-.PHONY : CMakeFiles/navier-stokes.dir/all
+CMakeFiles/stokes.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stokes.dir/build.make CMakeFiles/stokes.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stokes.dir/build.make CMakeFiles/stokes.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jellyfish/shared-folder/nmpde-labs/navier-stokes/stokes/build/CMakeFiles --progress-num=1,2,3 "Built target stokes"
+.PHONY : CMakeFiles/stokes.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/navier-stokes.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jellyfish/shared-folder/nmpde-labs/navier-stokes/build/CMakeFiles 3
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/navier-stokes.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jellyfish/shared-folder/nmpde-labs/navier-stokes/build/CMakeFiles 0
-.PHONY : CMakeFiles/navier-stokes.dir/rule
+CMakeFiles/stokes.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jellyfish/shared-folder/nmpde-labs/navier-stokes/stokes/build/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/stokes.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jellyfish/shared-folder/nmpde-labs/navier-stokes/stokes/build/CMakeFiles 0
+.PHONY : CMakeFiles/stokes.dir/rule
 
 # Convenience name for target.
-navier-stokes: CMakeFiles/navier-stokes.dir/rule
-.PHONY : navier-stokes
+stokes: CMakeFiles/stokes.dir/rule
+.PHONY : stokes
 
 # clean rule for target.
-CMakeFiles/navier-stokes.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/navier-stokes.dir/build.make CMakeFiles/navier-stokes.dir/clean
-.PHONY : CMakeFiles/navier-stokes.dir/clean
+CMakeFiles/stokes.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stokes.dir/build.make CMakeFiles/stokes.dir/clean
+.PHONY : CMakeFiles/stokes.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

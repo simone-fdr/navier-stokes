@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/jellyfish/shared-folder/nmpde-labs/navier-stokes/src/main-stokes.cpp" "CMakeFiles/navier-stokes.dir/src/main-stokes.cpp.o" "gcc" "CMakeFiles/navier-stokes.dir/src/main-stokes.cpp.o.d"
-  "/home/jellyfish/shared-folder/nmpde-labs/navier-stokes/src/stokes.cpp" "CMakeFiles/navier-stokes.dir/src/stokes.cpp.o" "gcc" "CMakeFiles/navier-stokes.dir/src/stokes.cpp.o.d"
+  "/home/jellyfish/shared-folder/nmpde-labs/navier-stokes/stokes/src/main-stokes.cpp" "CMakeFiles/stokes.dir/src/main-stokes.cpp.o" "gcc" "CMakeFiles/stokes.dir/src/main-stokes.cpp.o.d"
+  "/home/jellyfish/shared-folder/nmpde-labs/navier-stokes/stokes/src/stokes.cpp" "CMakeFiles/stokes.dir/src/stokes.cpp.o" "gcc" "CMakeFiles/stokes.dir/src/stokes.cpp.o.d"
   )
 
 # Targets to which this target links.

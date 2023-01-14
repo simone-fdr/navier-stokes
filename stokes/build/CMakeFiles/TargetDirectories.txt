@@ -1,3 +1,3 @@
-/home/jellyfish/shared-folder/nmpde-labs/navier-stokes/build/CMakeFiles/edit_cache.dir
-/home/jellyfish/shared-folder/nmpde-labs/navier-stokes/build/CMakeFiles/rebuild_cache.dir
-/home/jellyfish/shared-folder/nmpde-labs/navier-stokes/build/CMakeFiles/navier-stokes.dir
+/home/jellyfish/shared-folder/nmpde-labs/navier-stokes/stokes/build/CMakeFiles/rebuild_cache.dir
+/home/jellyfish/shared-folder/nmpde-labs/navier-stokes/stokes/build/CMakeFiles/edit_cache.dir
+/home/jellyfish/shared-folder/nmpde-labs/navier-stokes/stokes/build/CMakeFiles/stokes.dir

@@ -150,5 +150,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/navier-stokes.dir/DependInfo.cmake"
+  "CMakeFiles/stokes.dir/DependInfo.cmake"
   )

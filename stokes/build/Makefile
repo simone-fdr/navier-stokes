@@ -57,23 +57,13 @@ RM = /u/sw/toolchains/gcc-glibc/11.2.0/base/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jellyfish/shared-folder/nmpde-labs/navier-stokes
+CMAKE_SOURCE_DIR = /home/jellyfish/shared-folder/nmpde-labs/navier-stokes/stokes
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/jellyfish/shared-folder/nmpde-labs/navier-stokes/build
+CMAKE_BINARY_DIR = /home/jellyfish/shared-folder/nmpde-labs/navier-stokes/stokes/build
 
 #=============================================================================
 # Targets provided globally by CMake.
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/u/sw/toolchains/gcc-glibc/11.2.0/base/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-.PHONY : edit_cache/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -85,11 +75,21 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/u/sw/toolchains/gcc-glibc/11.2.0/base/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+.PHONY : edit_cache/fast
+
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jellyfish/shared-folder/nmpde-labs/navier-stokes/build/CMakeFiles /home/jellyfish/shared-folder/nmpde-labs/navier-stokes/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jellyfish/shared-folder/nmpde-labs/navier-stokes/stokes/build/CMakeFiles /home/jellyfish/shared-folder/nmpde-labs/navier-stokes/stokes/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jellyfish/shared-folder/nmpde-labs/navier-stokes/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jellyfish/shared-folder/nmpde-labs/navier-stokes/stokes/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named navier-stokes
+# Target rules for targets named stokes
 
 # Build rule for target.
-navier-stokes: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 navier-stokes
-.PHONY : navier-stokes
+stokes: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 stokes
+.PHONY : stokes
 
 # fast build rule for target.
-navier-stokes/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/navier-stokes.dir/build.make CMakeFiles/navier-stokes.dir/build
-.PHONY : navier-stokes/fast
+stokes/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stokes.dir/build.make CMakeFiles/stokes.dir/build
+.PHONY : stokes/fast
 
 src/main-stokes.o: src/main-stokes.cpp.o
 .PHONY : src/main-stokes.o
 
 # target to build an object file
 src/main-stokes.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/navier-stokes.dir/build.make CMakeFiles/navier-stokes.dir/src/main-stokes.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stokes.dir/build.make CMakeFiles/stokes.dir/src/main-stokes.cpp.o
 .PHONY : src/main-stokes.cpp.o
 
 src/main-stokes.i: src/main-stokes.cpp.i
@@ -142,7 +142,7 @@ src/main-stokes.i: src/main-stokes.cpp.i
 
 # target to preprocess a source file
 src/main-stokes.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/navier-stokes.dir/build.make CMakeFiles/navier-stokes.dir/src/main-stokes.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stokes.dir/build.make CMakeFiles/stokes.dir/src/main-stokes.cpp.i
 .PHONY : src/main-stokes.cpp.i
 
 src/main-stokes.s: src/main-stokes.cpp.s
@@ -150,7 +150,7 @@ src/main-stokes.s: src/main-stokes.cpp.s
 
 # target to generate assembly for a file
 src/main-stokes.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/navier-stokes.dir/build.make CMakeFiles/navier-stokes.dir/src/main-stokes.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stokes.dir/build.make CMakeFiles/stokes.dir/src/main-stokes.cpp.s
 .PHONY : src/main-stokes.cpp.s
 
 src/stokes.o: src/stokes.cpp.o
@@ -158,7 +158,7 @@ src/stokes.o: src/stokes.cpp.o
 
 # target to build an object file
 src/stokes.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/navier-stokes.dir/build.make CMakeFiles/navier-stokes.dir/src/stokes.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stokes.dir/build.make CMakeFiles/stokes.dir/src/stokes.cpp.o
 .PHONY : src/stokes.cpp.o
 
 src/stokes.i: src/stokes.cpp.i
@@ -166,7 +166,7 @@ src/stokes.i: src/stokes.cpp.i
 
 # target to preprocess a source file
 src/stokes.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/navier-stokes.dir/build.make CMakeFiles/navier-stokes.dir/src/stokes.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stokes.dir/build.make CMakeFiles/stokes.dir/src/stokes.cpp.i
 .PHONY : src/stokes.cpp.i
 
 src/stokes.s: src/stokes.cpp.s
@@ -174,7 +174,7 @@ src/stokes.s: src/stokes.cpp.s
 
 # target to generate assembly for a file
 src/stokes.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/navier-stokes.dir/build.make CMakeFiles/navier-stokes.dir/src/stokes.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stokes.dir/build.make CMakeFiles/stokes.dir/src/stokes.cpp.s
 .PHONY : src/stokes.cpp.s
 
 # Help Target
@@ -185,7 +185,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... navier-stokes"
+	@echo "... stokes"
 	@echo "... src/main-stokes.o"
 	@echo "... src/main-stokes.i"
 	@echo "... src/main-stokes.s"
