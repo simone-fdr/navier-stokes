@@ -49,17 +49,16 @@ public:
     vector_value(const Point<dim> & /*p*/,
                  Vector<double> &values) const override
     {
-      for (unsigned int i = 0; i < dim - 1; ++i)
+      for (unsigned int i = 0; i < dim; ++i)
         values[i] = 0.0;
-
-      values[dim - 1] = -g;
+      values[1] = -g;
     }
 
     virtual double
     value(const Point<dim> & /*p*/,
           const unsigned int component = 0) const override
     {
-      if (component == dim - 1)
+      if (component == 1)
         return -g;
       else
         return 0.0;
@@ -85,23 +84,23 @@ public:
     virtual void
     vector_value(const Point<dim> &p, Vector<double> &values) const override
     {
-      values[0] = -alpha * p[1] * (2.0 - p[1]) * (1.0 - p[2]) * (2.0 - p[2]);
 
-      for (unsigned int i = 1; i < dim + 1; ++i)
-        values[i] = 0.0;
+      for (unsigned int i = 0; i < dim + 1; ++i)
+          values[i] = 0.0;
+      values[2] = -alpha * p[1] * (2.0 - p[1]) * (1.0 - p[2]) * (2.0 - p[2]);
     }
 
     virtual double
     value(const Point<dim> &p, const unsigned int component = 0) const override
     {
-      if (component == 0)
+      if (component == 2)
         return -alpha * p[1] * (2.0 - p[1]) * (1.0 - p[2]) * (2.0 - p[2]);
       else
         return 0.0;
     }
 
   protected:
-    const double alpha = 1.0;
+    const double alpha = -1.0;
   };
 
   // Since we're working with block matrices, we need to make our own
