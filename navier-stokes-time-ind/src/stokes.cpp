@@ -1,7 +1,7 @@
 #include "stokes.hpp"
 
 void
-Stokes::setup()
+NavierStokes::setup()
 {
   // Create the mesh.
   {
@@ -13,7 +13,7 @@ Stokes::setup()
     grid_in.attach_triangulation(mesh_serial);
 
     const std::string mesh_file_name =
-      "../mesh/fifthmesh.msh";
+      "../mesh/sixthmesh.msh";
 
     std::ifstream grid_in_file(mesh_file_name);
     grid_in.read_msh(grid_in_file);
@@ -147,7 +147,7 @@ Stokes::setup()
     sparsity_pressure_mass.compress();
 
     pcout << "  Initializing the matrices" << std::endl;
-    system_matrix.reinit(sparsity);
+    jacobian_matrix.reinit(sparsity);
     pressure_mass.reinit(sparsity_pressure_mass);
 
     pcout << "  Initializing the system right-hand side" << std::endl;
@@ -155,11 +155,12 @@ Stokes::setup()
     pcout << "  Initializing the solution vector" << std::endl;
     solution_owned.reinit(block_owned_dofs, MPI_COMM_WORLD);
     solution.reinit(block_owned_dofs, block_relevant_dofs, MPI_COMM_WORLD);
+    delta_owned.reinit(block_owned_dofs, MPI_COMM_WORLD);
   }
 }
 
 void
-Stokes::assemble_system()
+NavierStokes::assemble_system()
 {
     pcout << "===============================================" << std::endl;
     pcout << "Assembling the system" << std::endl;
@@ -183,7 +184,7 @@ Stokes::assemble_system()
 
     std::vector<types::global_dof_index> dof_indices(dofs_per_cell);
 
-    system_matrix = 0.0;
+    jacobian_matrix = 0.0;
     system_rhs    = 0.0;
     pressure_mass = 0.0;
 
@@ -315,12 +316,12 @@ Stokes::assemble_system()
 
         cell->get_dof_indices(dof_indices);
 
-        system_matrix.add(dof_indices, cell_matrix);
+        jacobian_matrix.add(dof_indices, cell_matrix);
         system_rhs.add(dof_indices, cell_rhs);
         pressure_mass.add(dof_indices, cell_pressure_mass_matrix);
       }
 
-    system_matrix.compress(VectorOperation::add);
+    jacobian_matrix.compress(VectorOperation::add);
     system_rhs.compress(VectorOperation::add);
     pressure_mass.compress(VectorOperation::add);
 
@@ -349,23 +350,23 @@ Stokes::assemble_system()
                                                 {true, true, true, false}));
 
       MatrixTools::apply_boundary_values(
-        boundary_values, system_matrix, solution, system_rhs, false);
+        boundary_values, jacobian_matrix, delta_owned, system_rhs, false);
     }
 }
 
 void
-Stokes::solve_system()
+NavierStokes::solve_system()
 {
   pcout << "===============================================" << std::endl;
 
   SolverControl solver_control(2000, 1e-6 * system_rhs.l2_norm());
 
-  SolverFGMRES<TrilinosWrappers::MPI::BlockVector> solver(solver_control);
+  SolverGMRES<TrilinosWrappers::MPI::BlockVector> solver(solver_control);
 
   PreconditionBlockTriangular preconditioner;
-  preconditioner.initialize(system_matrix.block(0, 0),
+  preconditioner.initialize(jacobian_matrix.block(0, 0),
                           pressure_mass.block(1, 1),
-                          system_matrix.block(1, 0));
+                          jacobian_matrix.block(1, 0));
 
 
   pcout << "Solving the linear system" << std::endl;
@@ -377,7 +378,7 @@ Stokes::solve_system()
 }
 
 void
-Stokes::solve_newton()
+NavierStokes::solve_newton()
 {
   pcout << "===============================================" << std::endl;
   const unsigned int n_max_iters        = 1000;
@@ -414,7 +415,7 @@ Stokes::solve_newton()
 }
 
 void
-Stokes::output()
+NavierStokes::output()
 {
   pcout << "===============================================" << std::endl;
 

@@ -10,7 +10,7 @@ main(int argc, char *argv[])
   const unsigned int degree_velocity = 2;
   const unsigned int degree_pressure = 1;
 
-  Stokes problem(N, degree_velocity, degree_pressure);
+  NavierStokes problem(N, degree_velocity, degree_pressure);
 
   problem.setup();
   problem.assemble_system();

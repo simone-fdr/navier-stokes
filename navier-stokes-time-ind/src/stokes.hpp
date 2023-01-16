@@ -1,5 +1,5 @@
-#ifndef STOKES_HPP
-#define STOKES_HPP
+#ifndef NavierStokes_HPP
+#define NavierStokes_HPP
 
 #include <deal.II/base/conditional_ostream.h>
 #include <deal.II/base/quadrature_lib.h>
@@ -34,8 +34,8 @@
 
 using namespace dealii;
 
-// Class implementing a solver for the Stokes problem.
-class Stokes
+// Class implementing a solver for the NavierStokes problem.
+class NavierStokes
 {
 public:
   // Physical dimension (1D, 2D, 3D)
@@ -246,7 +246,7 @@ public:
   };
 
   // Constructor.
-  Stokes(const unsigned int &N_,
+  NavierStokes(const unsigned int &N_,
          const unsigned int &degree_velocity_,
          const unsigned int &degree_pressure_)
     : mpi_size(Utilities::MPI::n_mpi_processes(MPI_COMM_WORLD))
