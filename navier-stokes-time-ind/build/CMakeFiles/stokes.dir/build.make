@@ -108,7 +108,7 @@ stokes_EXTERNAL_OBJECTS =
 stokes: CMakeFiles/stokes.dir/src/stokes.cpp.o
 stokes: CMakeFiles/stokes.dir/src/main-stokes.cpp.o
 stokes: CMakeFiles/stokes.dir/build.make
-stokes: /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/dealii/9.3.1/lib/libdeal_II.g.so.9.3.1
+stokes: /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/dealii/9.3.1/lib/libdeal_II.so.9.3.1
 stokes: /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/boost/1.76.0/lib/libboost_iostreams.so
 stokes: /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/boost/1.76.0/lib/libboost_serialization.so
 stokes: /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/boost/1.76.0/lib/libboost_system.so

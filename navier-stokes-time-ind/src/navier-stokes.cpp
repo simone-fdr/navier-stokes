@@ -1,4 +1,4 @@
-#include "stokes.hpp"
+#include "navier-stokes.hpp"
 
 void
 NavierStokes::setup()
@@ -255,6 +255,10 @@ NavierStokes::assemble_system()
                                         fe_values.JxW(q);
 
                     //nonlinear term
+                    cell_matrix(i, j) += rho*
+                                        fe_values[velocity].divergence(j, q)*
+                                        fe_values[velocity].divergence(i, q)*
+                                        fe_values.JxW(q);
 
                     // Pressure mass matrix.
                     cell_pressure_mass_matrix(i, j) +=
@@ -265,7 +269,8 @@ NavierStokes::assemble_system()
                 double velocity_current_divergence = trace(velocity_current_gradients[q]);
 
                 // Forcing term.
-                cell_rhs(i) += nu * scalar_product(velocity_current_gradients[q],
+                // += ?
+                cell_rhs(i) -= nu * scalar_product(velocity_current_gradients[q],
                                 fe_values[velocity].gradient(i, q)) *
                                 fe_values.JxW(q);
 
@@ -282,7 +287,8 @@ NavierStokes::assemble_system()
                             * fe_values[pressure].value(i,q)
                             * fe_values.JxW(q);
 
-                cell_rhs(i) += rho * velocity_current_divergence
+                // += ?
+                cell_rhs(i) -= rho * velocity_current_divergence
                             * fe_values[velocity].divergence(i,q)
                             * fe_values.JxW(q);
               }
@@ -395,6 +401,8 @@ NavierStokes::solve_newton()
       pcout << "Newton iteration " << n_iter << "/" << n_max_iters
             << " - ||r|| = " << std::scientific << std::setprecision(6)
             << residual_norm << std::flush;
+
+      pcout << std::endl;
 
       // We actually solve the system only if the residual is larger than the
       // tolerance.

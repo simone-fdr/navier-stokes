@@ -1,4 +1,4 @@
-#include "stokes.hpp"
+#include "navier-stokes.hpp"
 
 // Main function.
 int
@@ -13,8 +13,7 @@ main(int argc, char *argv[])
   NavierStokes problem(N, degree_velocity, degree_pressure);
 
   problem.setup();
-  problem.assemble_system();
-  problem.solve_system();
+  problem.solve_newton();
   problem.output();
 
   return 0;
