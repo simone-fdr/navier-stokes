@@ -1,0 +1,3 @@
+/home/jellyfish/shared-folder/PDE/project_with_simo/navier-stokes/navier-stokes-time-ind/build/CMakeFiles/rebuild_cache.dir
+/home/jellyfish/shared-folder/PDE/project_with_simo/navier-stokes/navier-stokes-time-ind/build/CMakeFiles/edit_cache.dir
+/home/jellyfish/shared-folder/PDE/project_with_simo/navier-stokes/navier-stokes-time-ind/build/CMakeFiles/stokes.dir
