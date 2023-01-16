@@ -52,9 +52,7 @@ public:
       for (unsigned int i = 0; i < dim; ++i)
         values[i] = 0.0;
       values[1] = -g;
-
-      if(get_time() < 0.3)
-        values[2] += get_time();
+      values[2] += 5*get_time(); // Active forcing term
     }
 
     virtual double
@@ -87,7 +85,6 @@ public:
     virtual void
     vector_value(const Point<dim> &p, Vector<double> &values) const override
     {
-
       for (unsigned int i = 0; i < dim + 1; ++i)
           values[i] = 0.0;
       values[2] = -alpha * p[1] * (2.0 - p[1]) * (1.0 - p[2]) * (2.0 - p[2]);

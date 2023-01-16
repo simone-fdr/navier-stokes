@@ -11,7 +11,7 @@ main(int argc, char *argv[])
 
   const double T      = 1.0;
   const double deltat = 0.05;
-  const double theta  = 1.0;
+  const double theta  = 1;
 
   StokesTime problem(degree_velocity, degree_pressure, T, deltat, theta);
 

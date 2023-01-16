@@ -13,7 +13,7 @@ StokesTime::setup()
     grid_in.attach_triangulation(mesh_serial);
 
     const std::string mesh_file_name =
-      "../mesh/fifthmesh.msh";
+      "../mesh/sixthmesh.msh";
 
     std::ifstream grid_in_file(mesh_file_name);
     grid_in.read_msh(grid_in_file);
@@ -256,7 +256,7 @@ StokesTime::assemble_matrices()
     rhs_matrix.add(-(1.0 - theta), system_matrix);
 
     // Dirichlet boundary conditions.
-    {
+    /*{
       std::map<types::global_dof_index, double>           boundary_values;
       std::map<types::boundary_id, const Function<dim> *> boundary_functions;
 
@@ -281,7 +281,8 @@ StokesTime::assemble_matrices()
 
       MatrixTools::apply_boundary_values(
         boundary_values, lhs_matrix, solution, system_rhs, false);
-    }
+    }*/
+    // TODO questo qui sopra solo in rhs?
 }
 
 void
@@ -486,7 +487,7 @@ StokesTime::output(const unsigned int &time_step, const double &time) const
                                MPI_COMM_WORLD);
 
   std::vector<XDMFEntry> xdmf_entries({data_out.create_xdmf_entry(
-    data_filter, output_file_name + ".h5", 0, MPI_COMM_WORLD)});
+    data_filter, output_file_name + ".h5", time, MPI_COMM_WORLD)});
   data_out.write_xdmf_file(xdmf_entries,
                            output_file_name + ".xdmf",
                            MPI_COMM_WORLD);
