@@ -255,10 +255,10 @@ NavierStokes::assemble_system()
                                         fe_values.JxW(q);
 
                     //nonlinear term
-                    cell_matrix(i, j) += rho*
-                                        fe_values[velocity].divergence(j, q)*
-                                        fe_values[velocity].divergence(i, q)*
-                                        fe_values.JxW(q);
+                    //cell_pressure_mass_matrix(i, j) += rho*
+                    //                    fe_values[velocity].divergence(j, q)*
+                    //                    fe_values[velocity].divergence(i, q)*
+                    //                    fe_values.JxW(q);
 
                     // Pressure mass matrix.
                     cell_pressure_mass_matrix(i, j) +=
@@ -288,9 +288,9 @@ NavierStokes::assemble_system()
                             * fe_values.JxW(q);
 
                 // += ?
-                cell_rhs(i) -= rho * velocity_current_divergence
-                            * fe_values[velocity].divergence(i,q)
-                            * fe_values.JxW(q);
+                //cell_rhs(i) -= rho * velocity_current_divergence
+                //            * fe_values[velocity].divergence(i,q)
+                //            * fe_values.JxW(q);
               }
           }
 
@@ -374,6 +374,13 @@ NavierStokes::solve_system()
                           pressure_mass.block(1, 1),
                           jacobian_matrix.block(1, 0));
 
+
+  //SparseILU<double>                 pmass_preconditioner;
+  //SparseMatrix<double> pressure_mass_copy;
+
+  //pressure_mass_copy.copy_from(pressure_mass.block(1,1));
+  //pmass_preconditioner.initialize(pressure_mass_copy,
+  //                                SparseILU<double>::AdditionalData());
 
   pcout << "Solving the linear system" << std::endl;
   solver.solve(jacobian_matrix, delta_owned, system_rhs, preconditioner);

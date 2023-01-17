@@ -19,6 +19,7 @@
 #include <deal.II/grid/grid_in.h>
 
 #include <deal.II/lac/solver_cg.h>
+#include <deal.II/lac/solver_bicgstab.h>
 #include <deal.II/lac/solver_gmres.h>
 #include <deal.II/lac/trilinos_block_sparse_matrix.h>
 #include <deal.II/lac/trilinos_parallel_block_vector.h>
@@ -31,6 +32,13 @@
 
 #include <fstream>
 #include <iostream>
+
+
+// TODO if doesn't work remove
+#include <deal.II/lac/sparse_ilu.h>
+#include <deal.II/lac/block_sparse_matrix.h>
+#include <deal.II/lac/sparse_direct.h>
+// #include <deal.II/lac/block_schur_preconditioner.h>
 
 using namespace dealii;
 
@@ -202,7 +210,7 @@ public:
     vmult(TrilinosWrappers::MPI::BlockVector &      dst,
           const TrilinosWrappers::MPI::BlockVector &src) const
     {
-      SolverControl                           solver_control_velocity(1000,
+      SolverControl                           solver_control_velocity(10000,
                                             1e-2 * src.block(0).l2_norm());
       SolverCG<TrilinosWrappers::MPI::Vector> solver_cg_velocity(
         solver_control_velocity);
@@ -215,7 +223,7 @@ public:
       B->vmult(tmp, dst.block(0));
       tmp.sadd(-1.0, src.block(1));
 
-      SolverControl                           solver_control_pressure(1000,
+      SolverControl                           solver_control_pressure(10000,
                                             1e-2 * src.block(1).l2_norm());
       SolverCG<TrilinosWrappers::MPI::Vector> solver_cg_pressure(
         solver_control_pressure);
@@ -294,13 +302,13 @@ protected:
   // Problem definition. ///////////////////////////////////////////////////////
 
   // Kinematic viscosity [m2/s].
-  const double nu = 1;
+  const double nu = 1.0/200.0;
 
   // density of fluid
-  const double rho = 1;
+  const double rho = 1.0;
 
   // Outlet pressure [Pa].
-  const double p_out = 10;
+  const double p_out = 10.0;
 
   // Forcing term.
   ForcingTerm forcing_term;
@@ -368,5 +376,4 @@ protected:
   // System solution (including ghost elements).
   TrilinosWrappers::MPI::BlockVector solution;
 };
-
 #endif
