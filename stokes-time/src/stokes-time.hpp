@@ -52,6 +52,7 @@ public:
       for (unsigned int i = 0; i < dim; ++i)
         values[i] = 0.0;
       values[1] = -g;
+      if(get_time() <= 0.4)
       values[2] += 5*get_time(); // Active forcing term
     }
 
@@ -83,24 +84,24 @@ public:
     {}
 
     virtual void
-    vector_value(const Point<dim> &p, Vector<double> &values) const override
+    vector_value(const Point<dim> &/*p*/, Vector<double> &values) const override
     {
       for (unsigned int i = 0; i < dim + 1; ++i)
           values[i] = 0.0;
-      values[2] = -alpha * p[1] * (2.0 - p[1]) * (1.0 - p[2]) * (2.0 - p[2]);
+      values[2] = alpha;
     }
 
     virtual double
-    value(const Point<dim> &p, const unsigned int component = 0) const override
+    value(const Point<dim> &/*p*/, const unsigned int component = 0) const override
     {
       if (component == 2)
-        return -alpha * p[1] * (2.0 - p[1]) * (1.0 - p[2]) * (2.0 - p[2]);
+        return alpha;
       else
         return 0.0;
     }
 
   protected:
-    const double alpha = -1.0;
+    const double alpha = 2.0;
   };
 
   // Since we're working with block matrices, we need to make our own

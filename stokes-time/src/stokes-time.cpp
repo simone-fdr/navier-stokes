@@ -282,7 +282,7 @@ StokesTime::assemble_matrices()
       MatrixTools::apply_boundary_values(
         boundary_values, lhs_matrix, solution, system_rhs, false);
     }*/
-    // TODO questo qui sopra solo in rhs?
+    // TODO 
 }
 
 void
@@ -389,7 +389,7 @@ StokesTime::assemble_rhs(const double &time){
 
     rhs_matrix.vmult_add(system_rhs, solution_owned);
 
-    // Dirichlet boundary conditions. TODO poi toglie vedi se esplode
+    // Dirichlet boundary conditions. TODO
     {
       std::map<types::global_dof_index, double>           boundary_values;
       std::map<types::boundary_id, const Function<dim> *> boundary_functions;
@@ -504,7 +504,9 @@ StokesTime::solve()
   {
     pcout << "Applying the initial condition" << std::endl;
 
-    VectorTools::interpolate(dof_handler, inlet_velocity, solution_owned);
+    // TODO check this interpolation
+    Functions::ZeroFunction<dim> u0(dim);
+    VectorTools::interpolate(dof_handler, u0, solution_owned);
     solution = solution_owned;
 
     // Output the initial solution.

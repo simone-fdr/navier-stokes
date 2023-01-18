@@ -3,5 +3,5 @@ project(lab01 LANGUAGES CXX C)
 
 include(../../common/cmake-common.cmake)
 
-add_executable(navier-stokes src/navier-stokes.cpp src/main-stokes.cpp)
-deal_ii_setup_target(navier-stokes)
+add_executable(navier-stokes-time-ind src/navier-stokes.cpp src/main-stokes.cpp)
+deal_ii_setup_target(navier-stokes-time-ind)
