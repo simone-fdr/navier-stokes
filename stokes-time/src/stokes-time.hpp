@@ -304,6 +304,12 @@ protected:
 
   // Problem definition. ///////////////////////////////////////////////////////
 
+  // Polynomial degree used for velocity.
+  const unsigned int degree_velocity;
+
+  // Polynomial degree used for pressure.
+  const unsigned int degree_pressure;
+
   const double T;
 
     // Time step.
@@ -325,12 +331,6 @@ protected:
   InletVelocity inlet_velocity;
 
   // Discretization. ///////////////////////////////////////////////////////////
-
-  // Polynomial degree used for velocity.
-  const unsigned int degree_velocity;
-
-  // Polynomial degree used for pressure.
-  const unsigned int degree_pressure;
 
   // Mesh.
   parallel::fullydistributed::Triangulation<dim> mesh;

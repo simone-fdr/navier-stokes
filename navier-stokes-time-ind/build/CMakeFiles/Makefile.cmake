@@ -7,7 +7,7 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
-  "/home/jellyfish/shared-folder/nmpde-labs/common/cmake-common.cmake"
+  "/home/jellyfish/shared-folder/nmpde-labs/navier-stokes/common/cmake-common.cmake"
   "../CMakeLists.txt"
   "CMakeFiles/3.20.5/CMakeCCompiler.cmake"
   "CMakeFiles/3.20.5/CMakeCXXCompiler.cmake"

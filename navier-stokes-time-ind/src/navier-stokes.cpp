@@ -13,7 +13,7 @@ NavierStokes::setup()
     grid_in.attach_triangulation(mesh_serial);
 
     const std::string mesh_file_name =
-      "../mesh/sixthmesh.msh";
+      "../mesh/longmesh.msh";
 
     std::ifstream grid_in_file(mesh_file_name);
     grid_in.read_msh(grid_in_file);
@@ -151,7 +151,7 @@ NavierStokes::setup()
     pressure_mass.reinit(sparsity_pressure_mass);
 
     pcout << "  Initializing the system right-hand side" << std::endl;
-    system_rhs.reinit(block_owned_dofs, MPI_COMM_WORLD);
+    residual_vector.reinit(block_owned_dofs, MPI_COMM_WORLD);
     pcout << "  Initializing the solution vector" << std::endl;
     solution_owned.reinit(block_owned_dofs, MPI_COMM_WORLD);
     solution.reinit(block_owned_dofs, block_relevant_dofs, MPI_COMM_WORLD);
@@ -185,13 +185,13 @@ NavierStokes::assemble_system()
     std::vector<types::global_dof_index> dof_indices(dofs_per_cell);
 
     jacobian_matrix = 0.0;
-    system_rhs    = 0.0;
+    residual_vector    = 0.0;
     pressure_mass = 0.0;
 
     FEValuesExtractors::Vector velocity(0);
     FEValuesExtractors::Scalar pressure(dim);
 
-    // tensors
+    // Tensors
     std::vector<Tensor<1, dim>> velocity_current(n_q);
     std::vector<Tensor<2, dim>> velocity_current_gradients(n_q);
     std::vector<double> pressure_current(n_q);
@@ -233,7 +233,7 @@ NavierStokes::assemble_system()
                       fe_values.JxW(q);
 
                     // Advection nonlinear term I
-                    cell_matrix(i,j) += velocity_current_gradients[q] 
+                    cell_matrix(i,j) += velocity_current_gradients[q]
                                       * fe_values[velocity].value(j,q)
                                       * fe_values[velocity].value(i,q)
                                       * fe_values.JxW(q);
@@ -245,20 +245,14 @@ NavierStokes::assemble_system()
                                       * fe_values.JxW(q);
 
                     // Pressure term in the momentum equation.
-                    cell_matrix(i, j) -= fe_values[velocity].divergence(i, q) *
-                                        fe_values[pressure].value(j, q) *
-                                        fe_values.JxW(q);
+                    cell_matrix(i, j) -= fe_values[velocity].divergence(i, q)
+                                      * fe_values[pressure].value(j, q)
+                                      * fe_values.JxW(q);
 
                     // Pressure term in the continuity equation.
-                    cell_matrix(i, j) -= fe_values[velocity].divergence(j, q) *
-                                        fe_values[pressure].value(i, q) *
-                                        fe_values.JxW(q);
-
-                    //nonlinear term
-                    //cell_pressure_mass_matrix(i, j) += rho*
-                    //                    fe_values[velocity].divergence(j, q)*
-                    //                    fe_values[velocity].divergence(i, q)*
-                    //                    fe_values.JxW(q);
+                    cell_matrix(i, j) -= fe_values[velocity].divergence(j, q)
+                                      * fe_values[pressure].value(i, q)
+                                      * fe_values.JxW(q);
 
                     // Pressure mass matrix.
                     cell_pressure_mass_matrix(i, j) +=
@@ -269,7 +263,6 @@ NavierStokes::assemble_system()
                 double velocity_current_divergence = trace(velocity_current_gradients[q]);
 
                 // Forcing term.
-                // += ?
                 cell_rhs(i) -= nu * scalar_product(velocity_current_gradients[q],
                                 fe_values[velocity].gradient(i, q)) *
                                 fe_values.JxW(q);
@@ -282,15 +275,10 @@ NavierStokes::assemble_system()
                 cell_rhs(i) += pressure_current[q]
                               * fe_values[velocity].divergence(i,q)
                               * fe_values.JxW(q);
-                
+                              
                 cell_rhs(i) += velocity_current_divergence
                             * fe_values[pressure].value(i,q)
                             * fe_values.JxW(q);
-
-                // += ?
-                //cell_rhs(i) -= rho * velocity_current_divergence
-                //            * fe_values[velocity].divergence(i,q)
-                //            * fe_values.JxW(q);
               }
           }
 
@@ -323,12 +311,12 @@ NavierStokes::assemble_system()
         cell->get_dof_indices(dof_indices);
 
         jacobian_matrix.add(dof_indices, cell_matrix);
-        system_rhs.add(dof_indices, cell_rhs);
+        residual_vector.add(dof_indices, cell_rhs);
         pressure_mass.add(dof_indices, cell_pressure_mass_matrix);
       }
 
     jacobian_matrix.compress(VectorOperation::add);
-    system_rhs.compress(VectorOperation::add);
+    residual_vector.compress(VectorOperation::add);
     pressure_mass.compress(VectorOperation::add);
 
     // Dirichlet boundary conditions.
@@ -356,7 +344,7 @@ NavierStokes::assemble_system()
                                                 {true, true, true, false}));
 
       MatrixTools::apply_boundary_values(
-        boundary_values, jacobian_matrix, delta_owned, system_rhs, false);
+        boundary_values, jacobian_matrix, delta_owned, residual_vector, false);
     }
 }
 
@@ -365,7 +353,7 @@ NavierStokes::solve_system()
 {
   pcout << "===============================================" << std::endl;
 
-  SolverControl solver_control(2000, 1e-6 * system_rhs.l2_norm());
+  SolverControl solver_control(1000, 1e-4 * residual_vector.l2_norm());
 
   SolverGMRES<TrilinosWrappers::MPI::BlockVector> solver(solver_control);
 
@@ -374,20 +362,11 @@ NavierStokes::solve_system()
                           pressure_mass.block(1, 1),
                           jacobian_matrix.block(1, 0));
 
-
-  //SparseILU<double>                 pmass_preconditioner;
-  //SparseMatrix<double> pressure_mass_copy;
-
-  //pressure_mass_copy.copy_from(pressure_mass.block(1,1));
-  //pmass_preconditioner.initialize(pressure_mass_copy,
-  //                                SparseILU<double>::AdditionalData());
-
   pcout << "Solving the linear system" << std::endl;
-  solver.solve(jacobian_matrix, delta_owned, system_rhs, preconditioner);
+  solver.solve(jacobian_matrix, delta_owned, residual_vector, preconditioner);
   pcout << "  " << solver_control.last_step() << " GMRES iterations"
         << std::endl;
 
-  //solution = solution_owned;
 }
 
 void
@@ -403,7 +382,7 @@ NavierStokes::solve_newton()
   while (n_iter < n_max_iters && residual_norm > residual_tolerance)
     {
       assemble_system();
-      residual_norm = system_rhs.l2_norm();
+      residual_norm = residual_vector.l2_norm();
 
       pcout << "Newton iteration " << n_iter << "/" << n_max_iters
             << " - ||r|| = " << std::scientific << std::setprecision(6)

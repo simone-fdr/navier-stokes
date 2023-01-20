@@ -3072,48 +3072,6 @@ CMakeFiles/navier-stokes-time-ind.dir/src/main-stokes.cpp.o
  /u/sw/toolchains/gcc-glibc/11.2.0/prefix/include/c++/11.2.0/x86_64-mk-linux/bits/basic_file.h
  /u/sw/toolchains/gcc-glibc/11.2.0/prefix/include/c++/11.2.0/x86_64-mk-linux/bits/c++io.h
  /u/sw/toolchains/gcc-glibc/11.2.0/prefix/include/c++/11.2.0/bits/fstream.tcc
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/dealii/9.3.1/include/deal.II/lac/sparse_ilu.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/dealii/9.3.1/include/deal.II/lac/sparse_decomposition.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/dealii/9.3.1/include/deal.II/lac/sparse_matrix.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/dealii/9.3.1/include/deal.II/lac/block_sparse_matrix.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/dealii/9.3.1/include/deal.II/lac/block_vector.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/dealii/9.3.1/include/deal.II/lac/sparse_direct.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/dealii/9.3.1/include/deal.II/lac/sparse_matrix_ez.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/suitesparse/5.10.1/include/umfpack.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/suitesparse/5.10.1/include/SuiteSparse_config.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/suitesparse/5.10.1/include/umfpack_symbolic.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/suitesparse/5.10.1/include/umfpack_numeric.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/suitesparse/5.10.1/include/umfpack_solve.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/suitesparse/5.10.1/include/umfpack_free_symbolic.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/suitesparse/5.10.1/include/umfpack_free_numeric.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/suitesparse/5.10.1/include/umfpack_defaults.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/suitesparse/5.10.1/include/umfpack_qsymbolic.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/suitesparse/5.10.1/include/umfpack_wsolve.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/suitesparse/5.10.1/include/umfpack_triplet_to_col.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/suitesparse/5.10.1/include/umfpack_col_to_triplet.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/suitesparse/5.10.1/include/umfpack_transpose.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/suitesparse/5.10.1/include/umfpack_scale.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/suitesparse/5.10.1/include/umfpack_get_lunz.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/suitesparse/5.10.1/include/umfpack_get_numeric.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/suitesparse/5.10.1/include/umfpack_get_symbolic.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/suitesparse/5.10.1/include/umfpack_save_numeric.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/suitesparse/5.10.1/include/umfpack_load_numeric.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/suitesparse/5.10.1/include/umfpack_save_symbolic.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/suitesparse/5.10.1/include/umfpack_load_symbolic.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/suitesparse/5.10.1/include/umfpack_get_determinant.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/suitesparse/5.10.1/include/umfpack_report_status.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/suitesparse/5.10.1/include/umfpack_report_info.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/suitesparse/5.10.1/include/umfpack_report_control.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/suitesparse/5.10.1/include/umfpack_report_matrix.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/suitesparse/5.10.1/include/umfpack_report_triplet.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/suitesparse/5.10.1/include/umfpack_report_vector.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/suitesparse/5.10.1/include/umfpack_report_symbolic.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/suitesparse/5.10.1/include/umfpack_report_numeric.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/suitesparse/5.10.1/include/umfpack_report_perm.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/suitesparse/5.10.1/include/umfpack_timer.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/suitesparse/5.10.1/include/umfpack_tictoc.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/suitesparse/5.10.1/include/amd.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/suitesparse/5.10.1/include/umfpack_global.h
 
 CMakeFiles/navier-stokes-time-ind.dir/src/navier-stokes.cpp.o
  /home/jellyfish/shared-folder/nmpde-labs/navier-stokes/navier-stokes-time-ind/src/navier-stokes.cpp
@@ -6186,46 +6144,4 @@ CMakeFiles/navier-stokes-time-ind.dir/src/navier-stokes.cpp.o
  /u/sw/toolchains/gcc-glibc/11.2.0/prefix/include/c++/11.2.0/x86_64-mk-linux/bits/basic_file.h
  /u/sw/toolchains/gcc-glibc/11.2.0/prefix/include/c++/11.2.0/x86_64-mk-linux/bits/c++io.h
  /u/sw/toolchains/gcc-glibc/11.2.0/prefix/include/c++/11.2.0/bits/fstream.tcc
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/dealii/9.3.1/include/deal.II/lac/sparse_ilu.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/dealii/9.3.1/include/deal.II/lac/sparse_decomposition.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/dealii/9.3.1/include/deal.II/lac/sparse_matrix.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/dealii/9.3.1/include/deal.II/lac/block_sparse_matrix.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/dealii/9.3.1/include/deal.II/lac/block_vector.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/dealii/9.3.1/include/deal.II/lac/sparse_direct.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/dealii/9.3.1/include/deal.II/lac/sparse_matrix_ez.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/suitesparse/5.10.1/include/umfpack.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/suitesparse/5.10.1/include/SuiteSparse_config.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/suitesparse/5.10.1/include/umfpack_symbolic.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/suitesparse/5.10.1/include/umfpack_numeric.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/suitesparse/5.10.1/include/umfpack_solve.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/suitesparse/5.10.1/include/umfpack_free_symbolic.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/suitesparse/5.10.1/include/umfpack_free_numeric.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/suitesparse/5.10.1/include/umfpack_defaults.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/suitesparse/5.10.1/include/umfpack_qsymbolic.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/suitesparse/5.10.1/include/umfpack_wsolve.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/suitesparse/5.10.1/include/umfpack_triplet_to_col.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/suitesparse/5.10.1/include/umfpack_col_to_triplet.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/suitesparse/5.10.1/include/umfpack_transpose.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/suitesparse/5.10.1/include/umfpack_scale.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/suitesparse/5.10.1/include/umfpack_get_lunz.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/suitesparse/5.10.1/include/umfpack_get_numeric.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/suitesparse/5.10.1/include/umfpack_get_symbolic.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/suitesparse/5.10.1/include/umfpack_save_numeric.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/suitesparse/5.10.1/include/umfpack_load_numeric.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/suitesparse/5.10.1/include/umfpack_save_symbolic.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/suitesparse/5.10.1/include/umfpack_load_symbolic.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/suitesparse/5.10.1/include/umfpack_get_determinant.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/suitesparse/5.10.1/include/umfpack_report_status.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/suitesparse/5.10.1/include/umfpack_report_info.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/suitesparse/5.10.1/include/umfpack_report_control.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/suitesparse/5.10.1/include/umfpack_report_matrix.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/suitesparse/5.10.1/include/umfpack_report_triplet.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/suitesparse/5.10.1/include/umfpack_report_vector.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/suitesparse/5.10.1/include/umfpack_report_symbolic.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/suitesparse/5.10.1/include/umfpack_report_numeric.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/suitesparse/5.10.1/include/umfpack_report_perm.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/suitesparse/5.10.1/include/umfpack_timer.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/suitesparse/5.10.1/include/umfpack_tictoc.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/suitesparse/5.10.1/include/amd.h
- /u/sw/toolchains/gcc-glibc/11.2.0/pkgs/suitesparse/5.10.1/include/umfpack_global.h
 
