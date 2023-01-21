@@ -13,7 +13,7 @@ NavierStokes::setup()
     grid_in.attach_triangulation(mesh_serial);
 
     const std::string mesh_file_name =
-      "../mesh/longmesh.msh";
+      "../mesh/sixthmesh.msh";
 
     std::ifstream grid_in_file(mesh_file_name);
     grid_in.read_msh(grid_in_file);
@@ -322,7 +322,7 @@ NavierStokes::assemble_system(bool first_step)
     // Dirichlet boundary conditions.
     if(first_step)
     {
-      pcout << "Inserting real boundary conditions" << std::endl;
+      pcout << "Inserting true boundary conditions" << std::endl;
       std::map<types::global_dof_index, double>           boundary_values;
       std::map<types::boundary_id, const Function<dim> *> boundary_functions;
 
@@ -332,6 +332,7 @@ NavierStokes::assemble_system(bool first_step)
       Functions::ZeroFunction<dim> zero_function(dim + 1);
 
       boundary_functions[18] = &inlet_velocity;
+      //boundary_functions[19] = &inlet_velocity;
 
       VectorTools::interpolate_boundary_values(dof_handler,
                                               boundary_functions,
@@ -360,6 +361,7 @@ NavierStokes::assemble_system(bool first_step)
       Functions::ZeroFunction<dim> zero_function(dim + 1);
 
       boundary_functions[18] = &zero_function;
+      //boundary_functions[19] = &zero_function;
       boundary_functions[20] = &zero_function;
 
       VectorTools::interpolate_boundary_values(dof_handler,
@@ -378,7 +380,7 @@ NavierStokes::solve_system()
 {
   pcout << "===============================================" << std::endl;
 
-  SolverControl solver_control(10000, 1e-6 * residual_vector.l2_norm());
+  SolverControl solver_control(2000, 1e-6 * residual_vector.l2_norm());
 
   SolverGMRES<TrilinosWrappers::MPI::BlockVector> solver(solver_control);
 
