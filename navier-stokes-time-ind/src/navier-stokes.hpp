@@ -203,7 +203,7 @@ public:
     vmult(TrilinosWrappers::MPI::BlockVector &      dst,
           const TrilinosWrappers::MPI::BlockVector &src) const
     {
-      SolverControl                           solver_control_velocity(1000,
+      SolverControl                           solver_control_velocity(3000,
                                             1e-2 * src.block(0).l2_norm());
       SolverGMRES<TrilinosWrappers::MPI::Vector> solver_cg_velocity(
         solver_control_velocity);
@@ -216,7 +216,7 @@ public:
       B->vmult(tmp, dst.block(0));
       tmp.sadd(-1.0, src.block(1));
 
-      SolverControl                           solver_control_pressure(1000,
+      SolverControl                           solver_control_pressure(3000,
                                             1e-2 * src.block(1).l2_norm());
       SolverGMRES<TrilinosWrappers::MPI::Vector> solver_cg_pressure(
         solver_control_pressure);
@@ -266,7 +266,7 @@ public:
   // Assemble system. We also assemble the pressure mass matrix (needed for the
   // preconditioner).
   void
-  assemble_system();
+  assemble_system(bool first_step);
 
   // Solve system.
   void

@@ -160,7 +160,7 @@ NavierStokes::setup()
 }
 
 void
-NavierStokes::assemble_system()
+NavierStokes::assemble_system(bool first_step)
 {
     pcout << "===============================================" << std::endl;
     pcout << "Assembling the system" << std::endl;
@@ -320,14 +320,19 @@ NavierStokes::assemble_system()
     pressure_mass.compress(VectorOperation::add);
 
     // Dirichlet boundary conditions.
+    if(first_step)
     {
+      pcout << "Inserting real boundary conditions" << std::endl;
       std::map<types::global_dof_index, double>           boundary_values;
       std::map<types::boundary_id, const Function<dim> *> boundary_functions;
 
       // We interpolate first the inlet velocity condition alone, then the wall
       // condition alone, so that the latter "win" over the former where the two
       // boundaries touch.
+      Functions::ZeroFunction<dim> zero_function(dim + 1);
+
       boundary_functions[18] = &inlet_velocity;
+
       VectorTools::interpolate_boundary_values(dof_handler,
                                               boundary_functions,
                                               boundary_values,
@@ -335,8 +340,28 @@ NavierStokes::assemble_system()
                                                 {true, true, true, false}));
 
       boundary_functions.clear();
-      Functions::ZeroFunction<dim> zero_function(dim + 1);
+      
       boundary_functions[20] = &zero_function;
+      VectorTools::interpolate_boundary_values(dof_handler,
+                                              boundary_functions,
+                                              boundary_values,
+                                              ComponentMask(
+                                                {true, true, true, false}));
+
+      MatrixTools::apply_boundary_values(
+        boundary_values, jacobian_matrix, delta_owned, residual_vector, false);
+    }
+    else // We set following boundary conditions of the deltas to 0
+    {
+      pcout << "Setting all boundary conditions to 0" << std::endl;
+      std::map<types::global_dof_index, double>           boundary_values;
+      std::map<types::boundary_id, const Function<dim> *> boundary_functions;
+
+      Functions::ZeroFunction<dim> zero_function(dim + 1);
+
+      boundary_functions[18] = &zero_function;
+      boundary_functions[20] = &zero_function;
+
       VectorTools::interpolate_boundary_values(dof_handler,
                                               boundary_functions,
                                               boundary_values,
@@ -353,7 +378,7 @@ NavierStokes::solve_system()
 {
   pcout << "===============================================" << std::endl;
 
-  SolverControl solver_control(1000, 1e-4 * residual_vector.l2_norm());
+  SolverControl solver_control(10000, 1e-6 * residual_vector.l2_norm());
 
   SolverGMRES<TrilinosWrappers::MPI::BlockVector> solver(solver_control);
 
@@ -379,9 +404,11 @@ NavierStokes::solve_newton()
   unsigned int n_iter        = 0;
   double       residual_norm = residual_tolerance + 1;
 
+  bool first_step = true;
+
   while (n_iter < n_max_iters && residual_norm > residual_tolerance)
     {
-      assemble_system();
+      assemble_system(first_step);
       residual_norm = residual_vector.l2_norm();
 
       pcout << "Newton iteration " << n_iter << "/" << n_max_iters
@@ -398,6 +425,7 @@ NavierStokes::solve_newton()
 
           solution_owned += delta_owned;
           solution = solution_owned;
+          first_step = false;
         }
       else
         {
