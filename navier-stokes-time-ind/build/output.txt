@@ -1,0 +1,4569 @@
+Initializing the mesh
+  Number of elements = 378
+-----------------------------------------------
+Initializing the finite element space
+  Velocity degree:           = 2
+  Pressure degree:           = 1
+  DoFs per cell              = 34
+  Quadrature points per cell = 10
+  Quadrature points per face = 7
+-----------------------------------------------
+Initializing the DoF handler
+  Number of DoFs: 
+    velocity = 2496
+    pressure = 152
+    total    = 2648
+-----------------------------------------------
+Initializing the linear system
+  Initializing the sparsity pattern
+  Initializing the matrices
+  Initializing the system right-hand side
+  Initializing the solution vector
+===============================================
+===============================================
+Assembling the system
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+Newton iteration 0/1000 - ||r|| = 1.161583e+01
+===============================================
+Solving the linear system
+  407 GMRES iterations
+===============================================
+Assembling the system
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+solution velocity 2648
+velocity current 10
+solution velocity gradients 2648
+velocity current gradients 10
+solution pressure 2648
+pressure current 10
+Newton iteration 1/1000 - ||r|| = 4.636592e+00
+===============================================
+Solving the linear system
