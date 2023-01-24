@@ -13,7 +13,7 @@ NavierStokes::setup()
     grid_in.attach_triangulation(mesh_serial);
 
     const std::string mesh_file_name =
-      "../mesh/sixthmesh.msh";
+      "../mesh/short1.msh";
 
     std::ifstream grid_in_file(mesh_file_name);
     grid_in.read_msh(grid_in_file);
@@ -296,12 +296,7 @@ NavierStokes::assemble_system(bool first_step)
                             * fe_values[pressure].value(i,q)
                             * fe_values.JxW(q);
 
-                // Forcing term misterioso
-                //cell_rhs(i) += forcing_term_tensor 
-                //                * fe_values[velocity].value(i, q) 
-                //                * fe_values.JxW(q);
-
-                cell_rhs(i) += scalar_product(forcing_term_tensor,
+                cell_rhs(i) -= scalar_product(forcing_term_tensor,
                                               fe_values[velocity].value(i, q)) 
                                             * fe_values.JxW(q);
               }
@@ -400,7 +395,7 @@ NavierStokes::solve_linear_system()
 {
   pcout << "===============================================" << std::endl;
 
-  SolverControl solver_control(5000, 1e-6 * residual_vector.l2_norm());
+  SolverControl solver_control(99999, 1e-6 * residual_vector.l2_norm());
 
   SolverGMRES<TrilinosWrappers::MPI::BlockVector> solver(solver_control);
 

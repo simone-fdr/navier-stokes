@@ -53,7 +53,7 @@ public:
         values[i] = 0.0;
       values[1] = -g;
       if(get_time() <= 0.4)
-      values[2] += 5*get_time(); // Active forcing term
+      values[2] += get_time(); // Active forcing term
     }
 
     virtual double
