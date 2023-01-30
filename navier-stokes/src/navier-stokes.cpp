@@ -487,7 +487,7 @@ NavierStokes::output(const unsigned int &time_step, const double &time) const
   output_file_name = "output-" + std::string(4 - output_file_name.size(), '0') +
                      output_file_name;
 
-  output_file_name_path = "/scratch/hpc/par11/" + output_file_name
+  std::string output_file_name_path = "/scratch/hpc/par11/" + output_file_name
 
   DataOutBase::DataOutFilter data_filter(
     DataOutBase::DataOutFilterFlags(/*filter_duplicate_vertices = */ false,
