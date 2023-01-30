@@ -395,7 +395,7 @@ NavierStokes::solve_linear_system()
 {
   pcout << "===============================================" << std::endl;
 
-  SolverControl solver_control(99999, 1e-6 * residual_vector.l2_norm());
+  SolverControl solver_control(999999, 1e-6 * residual_vector.l2_norm());
 
   SolverGMRES<TrilinosWrappers::MPI::BlockVector> solver(solver_control);
 
@@ -487,12 +487,15 @@ NavierStokes::output(const unsigned int &time_step, const double &time) const
   output_file_name = "output-" + std::string(4 - output_file_name.size(), '0') +
                      output_file_name;
 
+  output_file_name_path = "/scratch/hpc/par11/" + output_file_name
+
   DataOutBase::DataOutFilter data_filter(
     DataOutBase::DataOutFilterFlags(/*filter_duplicate_vertices = */ false,
                                     /*xdmf_hdf5_output = */ true));
   data_out.write_filtered_data(data_filter);
+  // TODO modifica questo correttamente facendo si che venga chiamato prima il path e poi in locale
   data_out.write_hdf5_parallel(data_filter,
-                               output_file_name + ".h5",
+                               output_file_name_path + ".h5",
                                MPI_COMM_WORLD);
 
   std::vector<XDMFEntry> xdmf_entries({data_out.create_xdmf_entry(

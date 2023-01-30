@@ -297,6 +297,9 @@ public:
   void
   solve();
 
+  void
+  output(const unsigned int &time_step, const double &time) const;
+
 
 protected:
   // Assemble the tangent problem.
@@ -312,8 +315,6 @@ protected:
   solve_newton();
 
   // Output.
-  void
-  output(const unsigned int &time_step, const double &time) const;
 
   // Number of MPI processes.
   const unsigned int mpi_size;
