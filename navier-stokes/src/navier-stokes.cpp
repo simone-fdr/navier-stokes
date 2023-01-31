@@ -13,7 +13,7 @@ NavierStokes::setup()
     grid_in.attach_triangulation(mesh_serial);
 
     const std::string mesh_file_name =
-      "../mesh/long2.msh";
+      "../mesh/short3.msh";
 
     std::ifstream grid_in_file(mesh_file_name);
     grid_in.read_msh(grid_in_file);
@@ -308,7 +308,7 @@ NavierStokes::assemble_system(bool first_step)
             for (unsigned int f = 0; f < cell->n_faces(); ++f)
               {
                 if (cell->face(f)->at_boundary() &&
-                    cell->face(f)->boundary_id() == 19)
+                    (cell->face(f)->boundary_id() == 19 || cell->face(f)->boundary_id() == 20))
                   {
                     fe_face_values.reinit(cell, f);
 
@@ -317,7 +317,7 @@ NavierStokes::assemble_system(bool first_step)
                         for (unsigned int i = 0; i < dofs_per_cell; ++i)
                           {
                             cell_rhs(i) +=
-                              -p_out *
+                              - p_out *
                               scalar_product(fe_face_values.normal_vector(q),
                                             fe_face_values[velocity].value(i,
                                                                             q)) *

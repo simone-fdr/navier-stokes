@@ -348,7 +348,7 @@ protected:
   const double nu = 1./5.;
 
   // Outlet pressure [Pa].
-  const double p_out = 10;
+  const double p_out = 0.01;
 
   bool first_step;
 
