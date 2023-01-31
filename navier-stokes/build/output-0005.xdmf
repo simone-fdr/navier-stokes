@@ -4,7 +4,7 @@
   <Domain>
     <Grid Name="CellTime" GridType="Collection" CollectionType="Temporal">
       <Grid Name="mesh" GridType="Uniform">
-        <Time Value="0.25"/>
+        <Time Value="0.5"/>
         <Geometry GeometryType="XYZ">
           <DataItem Dimensions="12096 3" NumberType="Float" Precision="8" Format="HDF">
             output-0005.h5:/nodes

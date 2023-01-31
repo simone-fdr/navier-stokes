@@ -467,7 +467,10 @@ NavierStokes::output()
 
   data_out.build_patches();
 
-  const std::string output_file_name = "output-" + std::to_string(N);
+  std::string output_file_name = std::to_string(time_step);
+
+  output_file_name = "output-" + std::string(4 - output_file_name.size(), '0') +
+                     output_file_name;
 
   DataOutBase::DataOutFilter data_filter(
     DataOutBase::DataOutFilterFlags(/*filter_duplicate_vertices = */ false,
@@ -478,11 +481,8 @@ NavierStokes::output()
                                MPI_COMM_WORLD);
 
   std::vector<XDMFEntry> xdmf_entries({data_out.create_xdmf_entry(
-    data_filter, output_file_name + ".h5", 0, MPI_COMM_WORLD)});
+    data_filter, output_file_name + ".h5", time, MPI_COMM_WORLD)});
   data_out.write_xdmf_file(xdmf_entries,
                            output_file_name + ".xdmf",
                            MPI_COMM_WORLD);
-
-  pcout << "Output written to " << output_file_name << std::endl;
-  pcout << "===============================================" << std::endl;
 }

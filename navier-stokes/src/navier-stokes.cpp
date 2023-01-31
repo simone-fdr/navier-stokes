@@ -356,14 +356,14 @@ NavierStokes::assemble_system(bool first_step)
                                               ComponentMask(
                                                 {true, true, true, false}));
 
-      boundary_functions.clear();
+      //boundary_functions.clear();
       
-      boundary_functions[20] = &zero_function;
-      VectorTools::interpolate_boundary_values(dof_handler,
-                                              boundary_functions,
-                                              boundary_values,
-                                              ComponentMask(
-                                                {true, true, true, false}));
+      //boundary_functions[20] = &zero_function;
+      //VectorTools::interpolate_boundary_values(dof_handler,
+      //                                        boundary_functions,
+      //                                        boundary_values,
+      //                                        ComponentMask(
+      //                                          {true, true, true, false}));
 
       MatrixTools::apply_boundary_values(
         boundary_values, jacobian_matrix, delta_owned, residual_vector, false);
@@ -377,7 +377,7 @@ NavierStokes::assemble_system(bool first_step)
       Functions::ZeroFunction<dim> zero_function(dim + 1);
 
       boundary_functions[18] = &zero_function;
-      boundary_functions[20] = &zero_function;
+      //boundary_functions[20] = &zero_function;
 
       VectorTools::interpolate_boundary_values(dof_handler,
                                               boundary_functions,
@@ -453,6 +453,7 @@ NavierStokes::solve_newton()
     }
 }
 
+/*
 void
 NavierStokes::output(const unsigned int &time_step, const double &time) const
 {
@@ -490,12 +491,62 @@ NavierStokes::output(const unsigned int &time_step, const double &time) const
   std::string output_file_name_path = "/scratch/hpc/par11/" + output_file_name;
 
   DataOutBase::DataOutFilter data_filter(
-    DataOutBase::DataOutFilterFlags(/*filter_duplicate_vertices = */ false,
-                                    /*xdmf_hdf5_output = */ true));
+    DataOutBase::DataOutFilterFlags(filter_duplicate_vertices = false,
+                                    xdmf_hdf5_output =  true));
   data_out.write_filtered_data(data_filter);
   // TODO modifica questo correttamente facendo si che venga chiamato prima il path e poi in locale
   data_out.write_hdf5_parallel(data_filter,
                                output_file_name_path + ".h5",
+                               MPI_COMM_WORLD);
+
+  std::vector<XDMFEntry> xdmf_entries({data_out.create_xdmf_entry(
+    data_filter, output_file_name + ".h5", time, MPI_COMM_WORLD)});
+  data_out.write_xdmf_file(xdmf_entries,
+                           output_file_name + ".xdmf",
+                           MPI_COMM_WORLD);
+}
+*/
+
+void
+NavierStokes::output(const unsigned int &time_step, const double &time) const
+{
+  pcout << "===============================================" << std::endl;
+
+  DataOut<dim> data_out;
+
+  std::vector<DataComponentInterpretation::DataComponentInterpretation>
+    data_component_interpretation(
+      dim, DataComponentInterpretation::component_is_part_of_vector);
+  data_component_interpretation.push_back(
+    DataComponentInterpretation::component_is_scalar);
+  std::vector<std::string> names = {"velocity",
+                                    "velocity",
+                                    "velocity",
+                                    "pressure"};
+
+  data_out.add_data_vector(dof_handler,
+                           solution,
+                           names,
+                           data_component_interpretation);
+
+  std::vector<unsigned int> partition_int(mesh.n_active_cells());
+  GridTools::get_subdomain_association(mesh, partition_int);
+  const Vector<double> partitioning(partition_int.begin(), partition_int.end());
+  data_out.add_data_vector(partitioning, "partitioning");
+
+  data_out.build_patches();
+
+  std::string output_file_name = std::to_string(time_step);
+
+  output_file_name = "output-" + std::string(4 - output_file_name.size(), '0') +
+                     output_file_name;
+
+  DataOutBase::DataOutFilter data_filter(
+    DataOutBase::DataOutFilterFlags(/*filter_duplicate_vertices = */ false,
+                                    /*xdmf_hdf5_output = */ true));
+  data_out.write_filtered_data(data_filter);
+  data_out.write_hdf5_parallel(data_filter,
+                               output_file_name + ".h5",
                                MPI_COMM_WORLD);
 
   std::vector<XDMFEntry> xdmf_entries({data_out.create_xdmf_entry(
