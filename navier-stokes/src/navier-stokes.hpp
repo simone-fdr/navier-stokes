@@ -345,10 +345,10 @@ protected:
   const double theta;
 
   // Kinematic viscosity [m2/s].  
-  const double nu = 1./5.;
+  const double nu = 1./10.;
 
   // Outlet pressure [Pa].
-  const double p_out = 0.01;
+  const double p_out = 0.1;
 
   bool first_step;
 
